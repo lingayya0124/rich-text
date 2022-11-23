@@ -45,45 +45,46 @@ export default function Demo({
   }, [task == ""]);
   useEffect(() => {
     editor?.commands?.setTextAlign("justify");
+    editor?.commands.focus(false);
   }, []);
   return (
     <RichTextEditor editor={editor}>
       <RichTextEditor.Toolbar>
         <RichTextEditor.ControlsGroup>
           <RichTextEditor.Bold />
-          <RichTextEditor.Italic />
-          <RichTextEditor.Strikethrough />
-          <RichTextEditor.ClearFormatting />
-          <RichTextEditor.Highlight />
-          <RichTextEditor.Code />
+          <RichTextEditor.Italic tabIndex={-1} />
+          <RichTextEditor.Strikethrough tabIndex={-1} />
+          <RichTextEditor.ClearFormatting tabIndex={-1} />
+          <RichTextEditor.Highlight tabIndex={-1} />
+          <RichTextEditor.Code tabIndex={-1} />
         </RichTextEditor.ControlsGroup>
 
         <RichTextEditor.ControlsGroup>
-          <RichTextEditor.H1 />
-          <RichTextEditor.H2 />
-          <RichTextEditor.H3 />
-          <RichTextEditor.H4 />
+          <RichTextEditor.H1 tabIndex={-1} />
+          <RichTextEditor.H2 tabIndex={-1} />
+          <RichTextEditor.H3 tabIndex={-1} />
+          <RichTextEditor.H4 tabIndex={-1} />
         </RichTextEditor.ControlsGroup>
 
         <RichTextEditor.ControlsGroup>
-          <RichTextEditor.Blockquote />
-          <RichTextEditor.Hr />
-          <RichTextEditor.BulletList />
-          <RichTextEditor.OrderedList />
-          <RichTextEditor.Subscript />
-          <RichTextEditor.Superscript />
+          <RichTextEditor.Blockquote tabIndex={-1} />
+          <RichTextEditor.Hr tabIndex={-1} />
+          <RichTextEditor.BulletList tabIndex={-1} />
+          <RichTextEditor.OrderedList tabIndex={-1} />
+          <RichTextEditor.Subscript tabIndex={-1} />
+          <RichTextEditor.Superscript tabIndex={-1} />
         </RichTextEditor.ControlsGroup>
 
         <RichTextEditor.ControlsGroup>
-          <RichTextEditor.Link />
-          <RichTextEditor.Unlink />
+          <RichTextEditor.Link tabIndex={-1} />
+          <RichTextEditor.Unlink tabIndex={-1} />
         </RichTextEditor.ControlsGroup>
 
         <RichTextEditor.ControlsGroup>
-          <RichTextEditor.AlignLeft />
-          <RichTextEditor.AlignCenter />
-          <RichTextEditor.AlignJustify />
-          <RichTextEditor.AlignRight />
+          <RichTextEditor.AlignLeft tabIndex={-1} />
+          <RichTextEditor.AlignCenter tabIndex={-1} />
+          <RichTextEditor.AlignJustify tabIndex={-1} />
+          <RichTextEditor.AlignRight tabIndex={-1} />
         </RichTextEditor.ControlsGroup>
         <RichTextEditor.ControlsGroup>
           <RichTextEditor.ColorPicker
@@ -103,6 +104,7 @@ export default function Demo({
               "#fab005",
               "#fd7e14",
             ]}
+            tabIndex={-1}
           />
         </RichTextEditor.ControlsGroup>
       </RichTextEditor.Toolbar>
